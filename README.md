@@ -27,7 +27,10 @@ To run the project, you need:
 ### Installation
 
 1. Clone the repository or download the files.
-2. Ensure the following files are in the same directory:
+   ```bash
+   git clone https://github.com/youssefanjjar/Restaurant-Order-Form
+   ```
+3. Ensure the following files are in the same directory:
    - `index.html`
    - `styles.css`
    - `script.js`
