@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Order Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Restaurant Order Form</h1>
+  <form id="orderForm">
+    <label for="starter">Choose a Starter:</label>
+    <select id="starter" name="starter" onchange="changeNbrPersonne(this, 'starterCount')">
+      <option value="none">None</option>
+      <option value="salad">Salad ($5)</option>
+      <option value="soup">Soup ($4)</option>
+    </select>
+    <input type="number" id="starterCount" name="starterCount" value="0" min="0">
+
+    <label for="main">Choose a Main Course:</label>
+    <select id="main" name="main" onchange="changeNbrPersonne(this, 'mainCount')">
+      <option value="none">None</option>
+      <option value="steak">Steak ($15)</option>
+      <option value="pasta">Pasta ($12)</option>
+    </select>
+    <input type="number" id="mainCount" name="mainCount" value="0" min="0">
+
+    <label for="dessert">Choose a Dessert:</label>
+    <select id="dessert" name="dessert" onchange="changeNbrPersonne(this, 'dessertCount')">
+      <option value="none">None</option>
+      <option value="cake">Cake ($6)</option>
+      <option value="icecream">Ice Cream ($4)</option>
+    </select>
+    <input type="number" id="dessertCount" name="dessertCount" value="0" min="0">
+
+    <button type="button" onclick="generateBill()">Order</button>
+    <textarea id="bill" readonly rows="10" cols="50"></textarea>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
